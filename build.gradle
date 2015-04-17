@@ -1,0 +1,27 @@
+plugins {
+	id "com.gradle.plugin-publish" version "0.9.0"
+}
+
+apply plugin: 'groovy'
+
+dependencies {
+	compile gradleApi()
+	compile localGroovy()
+}
+
+version = "0.1"
+group = "com.ofbizcn.plugin"
+
+pluginBundle {
+	website = 'http://ofbizcn.com/'
+	vcsUrl = 'https://github.com/yuankai/noerp-gradle-plugin'
+	description = 'NoERP plugin provided by ofbizcn.com'
+	tags = ['noerp', 'ofbiz', 'plugin']
+
+	plugins {
+		noerpPlugin {
+			id = 'com.ofbizcn.noerp-plugin'
+			displayName = 'NoERP plugin'
+		}
+	}
+}
