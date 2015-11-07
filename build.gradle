@@ -10,19 +10,19 @@ dependencies {
 }
 
 version = "0.1"
-group = "com.ofbizcn.noerp"
+group = "org.noerp.gradle"
 
 pluginBundle {
 
-	website = 'http://ofbizcn.com/'
+	website = 'http://noerp.org/'
 	vcsUrl = 'https://github.com/yuankai/noerp-gradle-plugin'
-	description = 'NoERP plugin provided by ofbizcn.com'
+	description = 'NoERP plugin provided by noerp.org'
 	tags = ['noerp', 'ofbiz']
 
 	plugins {
 		noerpPlugin {
-			id = 'com.ofbizcn.noerp-plugin'
-			displayName = 'NoERP plugin'
+			id = 'org.noerp.gradle'
+			displayName = 'NoERP gradle plugin'
 		}
 	}
 }
