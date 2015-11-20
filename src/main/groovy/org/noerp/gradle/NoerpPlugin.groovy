@@ -7,8 +7,26 @@ import org.gradle.api.Task
 class NoerpPlugin implements Plugin<Project> {
 
 	void apply (Project project) {
-		project.task('hello') << {
-			println "hello"
+		project.task("install", type: InstallTask) {
+			
+		}
+		project.task("update", type: UpdateTask){
+
+		}
+		project.task("start", type: StartTask){
+			
+		}
+		project.task("start-debug", type: StartTask){
+			
+		}
+		project.task("stop", type: StopTask){
+			
+		}
+		project.task("create-component", type: CreateComponentTask){
+			
+		}
+		project.task("generate-CRUD", type: CreateComponentTask){
+			
 		}
 	}
 
