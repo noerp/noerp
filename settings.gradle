@@ -17,3 +17,9 @@ include 'services:webservice'
 */
 
 rootProject.name = 'noerp'
+
+include(':noerp-start')
+project(':noerp-start').projectDir = new File(settingsDir, 'vendor/noerp/start')
+
+include(':noerp-base')
+project(':noerp-base').projectDir = new File(settingsDir, 'vendor/noerp/base')
