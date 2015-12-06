@@ -1,0 +1,21 @@
+dependencies {
+	compile project(':noerp-base')
+	compile project(':noerp-entity')
+	compile project(':noerp-entityext')
+    compile project(':noerp-security')
+    compile project(':noerp-service')
+    compile project(':noerp-minilang')
+    compile project(':noerp-webapp')
+    compile project(':noerp-testtools')
+
+	compile fileTree(dir:'../base/lib', include:'*.jar')
+	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
+	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
+	compile fileTree(dir:'../base/lib/scripting', include:'*.jar')
+
+	compile fileTree(dir:'../entity/lib', include:'*.jar')
+    compile fileTree(dir:'../service/lib', include:'*.jar')
+    compile fileTree(dir:'../webapp/lib', include:'*.jar')
+    compile fileTree(dir:'../service/lib', include:'*.jar')
+
+}

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: NoERP Startup
+Implementation-Vendor: NoERP Project
+Main-Class: org.noerp.base.start.Start
+

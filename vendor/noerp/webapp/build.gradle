@@ -1,0 +1,27 @@
+dependencies {
+    compile project(':noerp-start')
+	compile project(':noerp-base')
+	compile project(':noerp-entity')
+    compile project(':noerp-security')
+    compile project(':noerp-service')
+    compile project(':noerp-minilang')
+
+    compile fileTree(dir:'lib', include:'*.jar')
+	compile fileTree(dir:'../base/lib', include:'*.jar')
+	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
+	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
+	compile fileTree(dir:'../base/lib/scripting', include:'*.jar')
+
+    compile fileTree(dir:'../catalina/lib', include:'*.jar')
+	compile fileTree(dir:'../entity/lib', include:'*.jar')
+    compile fileTree(dir:'../service/lib', include:'*.jar')
+
+}
+
+sourceSets.main.java {
+    srcDirs = ["src/main/java"]
+    exclude "org/noerp/webapp/view/JasperReportsPdfViewHandler.java"
+    exclude "org/noerp/webapp/view/JasperReportsXmlViewHandler.java"
+    exclude "org/noerp/webapp/view/JasperReportsJXlsViewHandler.java"
+    exclude "org/noerp/webapp/view/JasperReportsPoiXlsViewHandler.java"
+}

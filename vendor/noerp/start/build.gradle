@@ -1,0 +1,20 @@
+processResources {
+	from('src/main/java') {
+		include '**/*.properties'
+	}
+}
+
+jar {
+	manifest {
+		attributes 'Manifest-Version': '1.0'
+		attributes 'Implementation-Title': 'NoERP Startup'
+		attributes 'Implementation-Vendor': 'NoERP Project'
+		attributes 'Main-Class': 'org.noerp.base.start.Start'
+	}
+}
+
+copy {
+	from './build/libs/noerp-start.jar'
+	into '../../../bin'
+	rename "noerp-start.jar", "noerp.jar"
+}

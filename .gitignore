@@ -11,8 +11,9 @@
 hs_err_pid*
 
 .*
-/vendor/
-/bin/start.jar
+# /vendor/
+/runtime/
+/bin/noerp.jar
 
 # IDE config fiels
 *.iml

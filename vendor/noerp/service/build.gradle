@@ -1,0 +1,11 @@
+dependencies {
+	compile project(':noerp-base')
+	compile project(':noerp-entity')
+	compile project(':noerp-security')
+
+	compile fileTree(dir:'lib', include:'*.jar')
+    compile fileTree(dir:'../base/lib/common', include:'*.jar')
+	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
+    compile fileTree(dir:'../base/lib/scripting', include:'*.jar')
+	compile fileTree(dir:'../entity/lib', include:'*.jar')
+}

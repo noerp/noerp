@@ -18,8 +18,9 @@ include 'services:webservice'
 
 rootProject.name = 'noerp'
 
-include(':noerp-start')
-project(':noerp-start').projectDir = new File(settingsDir, 'vendor/noerp/start')
+def subProjects = ['start', 'base', 'entity', 'entityext', 'service', 'minilang', 'common', 'datafile', 'webapp', 'widget', 'catalina', 'geronimo', 'security', 'testtools', 'webtools']
 
-include(':noerp-base')
-project(':noerp-base').projectDir = new File(settingsDir, 'vendor/noerp/base')
+for(def subProject: subProjects){
+    include(':noerp-'+subProject)
+    project(':noerp-'+subProject).projectDir = new File(settingsDir, 'vendor/noerp/'+subProject)
+}

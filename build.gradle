@@ -3,13 +3,19 @@ apply plugin: 'eclipse'
 
 defaultTasks 'build'
 
-
 subprojects {
     apply plugin: 'java'
+}
 
+allprojects {
     repositories {
+        maven {
+            url "http://maven.oschina.net/content/groups/public"
+        }
         jcenter()
     }
 }
 
+task run(){
 
+}

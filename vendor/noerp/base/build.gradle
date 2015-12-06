@@ -1,0 +1,18 @@
+dependencies {
+	compile project(':noerp-start')
+
+	compile 'avalon-framework:avalon-framework:4.2.0'
+	compile 'net.sf.barcode4j:barcode4j-fop-ext-complete:2.0'
+	compile 'commons-beanutils:commons-beanutils-core:1.8.3'
+	compile 'org.codehaus.groovy:groovy-all:2.2.1'
+	compile 'net.sourceforge.cobertura:cobertura:1.9.4.1'
+	compile 'jdbm:jdbm:1.0'
+	compile 'com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:1.0'
+
+
+	compile fileTree(dir:'lib', include:'*.jar')
+	compile fileTree(dir:'lib/ant', include:'*.jar')
+	compile fileTree(dir:'lib/commons', include:'*.jar')
+	compile fileTree(dir:'lib/j2eespecs', include:'*.jar')
+	compile fileTree(dir:'lib/scripting', include:'*.jar')
+}
