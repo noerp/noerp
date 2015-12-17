@@ -87,7 +87,7 @@ under the License.
       <#if orgName?has_content>
         <li class="org">${orgName}</li>
       </#if>
-      <#if userLogin.partyId??>
+      <#if userLogin.containsKey('partyId') && userLogin.partyId??>
         <li class="user"><a href="<@ofbizUrl>passwordChange</@ofbizUrl>">${userName}</a></li>
       <#else>
         <li class="user">${userName}</li>

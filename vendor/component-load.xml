@@ -33,6 +33,7 @@ under the License.
     <load-component component-location="noerp/webapp"/>
     <load-component component-location="noerp/widget"/>
     <load-component component-location="noerp/testtools"/>
+    <load-component component-location="noerp/assets"/>
     <load-component component-location="noerp/webtools"/>
 
     <load-component component-location="ofbizcn/tomahawk"/>

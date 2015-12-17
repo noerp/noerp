@@ -18,9 +18,18 @@ include 'services:webservice'
 
 rootProject.name = 'noerp'
 
-def subProjects = ['start', 'base', 'entity', 'entityext', 'service', 'minilang', 'common', 'datafile', 'webapp', 'widget', 'catalina', 'geronimo', 'security', 'testtools', 'webtools']
+//get sub projects from vendor
+def vendorSubProjects = ['start', 'base', 'entity', 'entityext', 'service', 'minilang', 'common', 'datafile', 'webapp', 'widget', 'catalina', 'geronimo', 'security', 'testtools', 'webtools', 'assets']
 
-for(def subProject: subProjects){
+for(def subProject: vendorSubProjects){
     include(':noerp-'+subProject)
     project(':noerp-'+subProject).projectDir = new File(settingsDir, 'vendor/noerp/'+subProject)
+}
+
+//get sub projects from apps
+def appSubProjects = []
+
+for(def subProject: appSubProjects){
+    include(':noerp-'+subProject)
+    project(':noerp-'+subProject).projectDir = new File(settingsDir, 'apps/'+subProject)
 }

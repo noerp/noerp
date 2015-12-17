@@ -18,15 +18,15 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<component name="images"
+<component name="assets"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://noerp.org/dtds/ofbiz-component.xsd">
+        xsi:noNamespaceSchemaLocation="http://noerp.org/dtds/component.xsd">
     <resource-loader name="main" type="component"/>
-    <webapp name="images"
-        title="Images"
+    <webapp name="assets"
+        title="Assets"
         server="default-server"
-        location="webapp/images"
-        mount-point="/images"
+        location="webapp/assets"
+        mount-point="/assets"
         app-bar-display="false"/>
 </component>
 

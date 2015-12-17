@@ -145,27 +145,27 @@ under the License.
                 <set field="layoutSettings.javaScripts[+0]" value="${groovy: org.noerp.common.JsLanguageFilesMapping.jquery.getFilePath(initialLocaleComplete)}" global="true" />
                 <set field="layoutSettings.javaScripts[+0]" value="${groovy: org.noerp.common.JsLanguageFilesMapping.validation.getFilePath(initialLocaleComplete)}" global="true" />
                 <set field="layoutSettings.javaScripts[+0]" value="${groovy: org.noerp.common.JsLanguageFilesMapping.dateTime.getFilePath(initialLocaleComplete)}" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/datetimepicker/jquery-ui-timepicker-addon.min-1.4.3.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/jquery.maskedinput-1.3.1.min.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/ui/js/jquery-ui-1.10.3.min.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/jeditable/jquery.jeditable.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/validate/jquery.validate.min.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/fjTimer/jquerytimer-min.js" global="true" />
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/jquery-migrate-1.2.1.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/jquery-1.11.0.min.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/datetimepicker/jquery-ui-timepicker-addon.min-1.4.3.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/jquery.maskedinput-1.3.1.min.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/ui/js/jquery-ui-1.10.3.min.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/jeditable/jquery.jeditable.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/validate/jquery.validate.min.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/fjTimer/jquerytimer-min.js" global="true" />
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/jquery-migrate-1.2.1.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/jquery-1.11.0.min.js" global="true" />
                 <!-- jQuery CSSs -->
-                <set field="layoutSettings.styleSheets[+0]" value="/images/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.css" global="true" />
+                <set field="layoutSettings.styleSheets[+0]" value="/assets/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.css" global="true" />
                 
-                <set field="layoutSettings.javaScripts[]" value="/images/OpenLayers-2.13.1.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/selectall.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/fieldlookup.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/date/date.format-1.2.3-min.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/date/date.timezone-min.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/miscAjaxFunctions.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/selectMultipleRelatedValues.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/util.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/date/FromThruDateCheck.js" global="true"/>                
+                <set field="layoutSettings.javaScripts[]" value="/assets/OpenLayers-2.13.1.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/selectall.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/fieldlookup.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/date/date.format-1.2.3-min.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/date/date.timezone-min.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/miscAjaxFunctions.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/selectMultipleRelatedValues.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/util.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/date/FromThruDateCheck.js" global="true"/>                
                 <set field="visualThemeId" from-field="userPreferences.VISUAL_THEME" global="true" />
                 <service service-name="getVisualThemeResources">
                     <field-map field-name="visualThemeId" />
@@ -185,7 +185,7 @@ under the License.
                 <section>
                     <actions>
                         <set field="layoutSettings.commonHeaderImageLinkUrl" from-field="layoutSettings.commonHeaderImageLinkUrl" default-value="main" global="true" />
-                        <set field="iconsLocation" from-field="layoutSettings.VT_ICONS_LOC[0]" default-value="/images/icons/famfamfam" global="true" />
+                        <set field="iconsLocation" from-field="layoutSettings.VT_ICONS_LOC[0]" default-value="/assets/icons/famfamfam" global="true" />
                         <set field="headerTemplateLocation" from-field="layoutSettings.VT_HDR_TMPLT_LOC[0]" />
                         <set field="footerTemplateLocation" from-field="layoutSettings.VT_FTR_TMPLT_LOC[0]" />
                         <set field="appbarTemplateLocation" from-field="layoutSettings.VT_NAV_TMPLT_LOC[0]" />
@@ -392,7 +392,7 @@ under the License.
                         </service>
 
                         <set field="layoutSettings" from-field="themeResources" default-value="${layoutSettings}" global="true"/>
-                        <set field="layoutSettings.javaScripts[]" value="/images/fieldlookup.js" global="true"/>
+                        <set field="layoutSettings.javaScripts[]" value="/assets/fieldlookup.js" global="true"/>
 
                         <set field="messagesTemplateLocation" from-field="layoutSettings.VT_MSG_TMPLT_LOC[0]" default-value="component://common/webcommon/includes/messages.ftl"/>
                     </actions>
@@ -468,8 +468,8 @@ under the License.
         <section>
             <actions>
                 <!-- The default (global) stylesheet -->
-                <set field="layoutSettings.styleSheets[+0]" value="/images/maincss.css" global="true"/>
-                <set field="layoutSettings.rtlStyleSheets[+0]" value="/images/mainrtl.css" global="true"/>
+                <set field="layoutSettings.styleSheets[+0]" value="/assets/maincss.css" global="true"/>
+                <set field="layoutSettings.rtlStyleSheets[+0]" value="/assets/mainrtl.css" global="true"/>
                 <!-- The default (global) java scripts -->
                     <!-- jQuery part -->
                 <!-- Load available JS Language Files -->
@@ -478,25 +478,25 @@ under the License.
                 <set field="layoutSettings.javaScripts[+0]" value="${groovy: org.noerp.common.JsLanguageFilesMapping.jquery.getFilePath(initialLocaleComplete)}" global="true"/>
                 <set field="layoutSettings.javaScripts[+0]" value="${groovy: org.noerp.common.JsLanguageFilesMapping.validation.getFilePath(initialLocaleComplete)}" global="true"/>
 
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/datetimepicker/jquery-ui-timepicker-addon.min-1.4.3.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/ui/js/jquery-ui-1.10.3.min.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/jeditable/jquery.jeditable.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/fjTimer/jquerytimer-min.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/plugins/validate/jquery.validate.min.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/jquery-migrate-1.2.1.js" global="true"/>
-                <set field="layoutSettings.javaScripts[+0]" value="/images/jquery/jquery-1.11.0.min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/datetimepicker/jquery-ui-timepicker-addon.min-1.4.3.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/ui/js/jquery-ui-1.10.3.min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/jeditable/jquery.jeditable.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/fjTimer/jquerytimer-min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/plugins/validate/jquery.validate.min.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/jquery-migrate-1.2.1.js" global="true"/>
+                <set field="layoutSettings.javaScripts[+0]" value="/assets/jquery/jquery-1.11.0.min.js" global="true"/>
                     <!-- jQuery CSSs -->
-                <set field="layoutSettings.styleSheets[+0]" value="/images/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.css" global="true"/>
+                <set field="layoutSettings.styleSheets[+0]" value="/assets/jquery/plugins/asmselect/jquery.asmselect-1.0.4a-beta.css" global="true"/>
 
-                <set field="layoutSettings.javaScripts[]" value="/images/OpenLayers-2.13.1.js" global="true" />
-                <set field="layoutSettings.javaScripts[]" value="/images/selectall.js" global="true"/>
-                <set field="layoutSettings.javaScripts[]" value="/images/fieldlookup.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/assets/OpenLayers-2.13.1.js" global="true" />
+                <set field="layoutSettings.javaScripts[]" value="/assets/selectall.js" global="true"/>
+                <set field="layoutSettings.javaScripts[]" value="/assets/fieldlookup.js" global="true"/>
                 <!-- The default (global) shortcut icon -->
-                <set field="layoutSettings.shortcutIcon" value="/images/ofbiz.ico" global="true"/>
+                <set field="layoutSettings.shortcutIcon" value="/assets/ofbiz.ico" global="true"/>
                 <!-- The settings below are used for xsl-fo screens -->
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
-                <set field="logoImageUrl" value="/images/ofbiz_logo.gif"/>
+                <set field="logoImageUrl" value="/assets/ofbiz_logo.gif"/>
                 <!--<set field="defaultFontFamily" value="Arial"/>-->
             </actions>
             <widgets>
@@ -515,7 +515,7 @@ under the License.
         <section>
             <actions>
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
-                <set field="logoImageUrl" value="/images/ofbiz_logo.gif" global="true"/>
+                <set field="logoImageUrl" value="/assets/ofbiz_logo.gif" global="true"/>
                 <property-to-field resource="fop.properties" field="defaultFontFamily" property="fop.font.family" default="Arial"/>
             </actions>
             <widgets>
@@ -528,7 +528,7 @@ under the License.
     <screen name="GlobalFoDecorator">
         <section>
             <actions>
-                <set field="layoutSettings.commonHeaderImageUrl" value="/images/ofbiz_logo.gif"/>
+                <set field="layoutSettings.commonHeaderImageUrl" value="/assets/ofbiz_logo.gif"/>
             </actions>
             <widgets>
                 <platform-specific>
@@ -549,7 +549,7 @@ under the License.
         <section>
             <actions>
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
-                <set field="logoImageUrl" value="/images/ofbiz_logo.gif"/>
+                <set field="logoImageUrl" value="/assets/ofbiz_logo.gif"/>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
