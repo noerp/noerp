@@ -6,7 +6,11 @@ dependencies {
     compile project(':noerp-service')
     compile project(':noerp-minilang')
 
-    compile fileTree(dir:'lib', include:'*.jar')
+    compile 'org.apache.avalon.framework:avalon-framework-impl:4.3.1'
+    compile 'net.sf.ezmorph:ezmorph:0.9.1'
+    compile 'com.lowagie:itext:2.1.7'
+    compile 'rome:rome:0.9'
+
 	compile fileTree(dir:'../base/lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
 	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')

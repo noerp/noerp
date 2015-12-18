@@ -3,7 +3,9 @@ dependencies {
 	compile project(':noerp-start')
 	compile project(':noerp-entity')
 
-	compile fileTree(dir:'lib', include:'*.jar')
+	compile 'org.apache.tomcat:tomcat-catalina-ha:7.0.65'
+
+	//compile fileTree(dir:'lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
 	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')

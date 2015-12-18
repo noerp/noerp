@@ -3,7 +3,17 @@ dependencies {
 	compile project(':noerp-entity')
 	compile project(':noerp-security')
 
-	compile fileTree(dir:'lib', include:'*.jar')
+	compile 'org.apache.ws.commons.axiom:axiom-api:1.2.14'
+	compile 'org.apache.ws.commons.axiom:axiom-impl:1.2.14'
+	compile 'org.apache.axis2:axis2-adb:1.6.3'
+	compile 'org.apache.axis2:axis2-kernel:1.6.3'
+	compile 'org.apache.axis2:axis2-transport-http:1.6.3'
+	compile 'org.apache.axis2:axis2-transport-local:1.6.3'
+	compile 'commons-httpclient:commons-httpclient:3.1'
+	compile 'org.apache.neethi:neethi:3.0.2'
+	compile 'wsdl4j:wsdl4j:1.6.2'
+	compile 'org.apache.servicemix.bundles:org.apache.servicemix.bundles.xmlschema:1.4.3_1'
+
     compile fileTree(dir:'../base/lib/common', include:'*.jar')
 	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
     compile fileTree(dir:'../base/lib/scripting', include:'*.jar')

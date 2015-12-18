@@ -2,7 +2,8 @@ dependencies {
 	compile project(':noerp-base')
 	compile project(':noerp-entity')
 
-	compile fileTree(dir:'lib', include:'*.jar')
+	compile 'org.apache.geronimo.components:geronimo-transaction:3.1.1'
+
 	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
 	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
 	compile fileTree(dir:'../entity/lib', include:'*.jar')

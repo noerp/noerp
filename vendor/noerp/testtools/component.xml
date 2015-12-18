@@ -28,8 +28,7 @@
     <classpath type="dir" location="dtd"/>
     
     <!-- load single or multiple external libraries -->
-    <classpath type="jar" location="lib/*"/>
-    <classpath type="jar" location="build/lib/*"/>
+    <classpath type="jar" location="build/libs/*"/>
     
     <!-- service resources: model(s), eca(s) and group definitions -->
     <service-resource type="model" loader="main" location="servicedef/services.xml"/>

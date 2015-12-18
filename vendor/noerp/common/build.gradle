@@ -7,7 +7,6 @@ dependencies {
 	compile project(':noerp-webapp')
 	compile project(':noerp-widget')
 
-	compile fileTree(dir:'lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
 	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')

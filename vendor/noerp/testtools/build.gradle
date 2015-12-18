@@ -5,8 +5,10 @@ dependencies {
 	compile project(':noerp-service')
 	compile project(':noerp-minilang')
 
+	compile 'org.springframework:spring-core:4.2.3.RELEASE'
+	compile 'org.springframework:spring-test:4.2.3.RELEASE'
 
-	compile fileTree(dir:'lib', include:'*.jar')
+	//compile fileTree(dir:'lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib', include:'*.jar')
 	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
 	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
