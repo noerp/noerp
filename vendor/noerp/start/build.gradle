@@ -1,9 +1,3 @@
-processResources {
-	from('src/main/java') {
-		include '**/*.properties'
-	}
-}
-
 jar {
 	manifest {
 		attributes 'Manifest-Version': '1.0'

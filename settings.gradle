@@ -30,8 +30,9 @@ void includeProjects(File vendor){
 File[] componentDirs = fileList(vendorDir)
 
 // Add apps if exists
-if(file(appsDir).exists()){
-	componentDirs.add(new File(appsDir))
+File apps = new File(appsDir)
+if(apps.exists()){
+	componentDirs += [apps]
 }
 
 // Include sub projects
