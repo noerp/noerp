@@ -37,5 +37,6 @@ under the License.
     <load-component component-location="noerp/webtools"/>
 
     <load-component component-location="ofbizcn/tomahawk"/>
+    <load-component component-location="ofbizcn/flatgrey"/>
 
 </component-loader>
