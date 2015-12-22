@@ -22,7 +22,7 @@ under the License.
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://noerp.org/dtds/component.xsd">
     <resource-loader name="main" type="component"/>
-    <classpath type="jar" location="libs/*"/>
+    <classpath type="jar" location="lib/*"/>
     <classpath type="jar" location="build/libs/*"/>
     <!-- <classpath type="dir" location="config"/> -->
 </component>
