@@ -1,15 +1,1 @@
-apply plugin: 'eclipse'
-
-defaultTasks 'build'
-
-subprojects {
-    apply plugin: 'java'
-    apply plugin: 'groovy'
-}
-
-allprojects {
-    repositories {
-    	mavenCentral()
-        jcenter()
-    }
-}
+apply plugin: 'org.noerp.gradle'
