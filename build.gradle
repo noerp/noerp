@@ -1,3 +1,5 @@
+defaultTasks 'build'
+
 buildscript {
   repositories {
     maven {
@@ -27,7 +29,7 @@ group = "org.noerp"
 pluginBundle {
 
 	website = 'http://noerp.org/'
-	vcsUrl = 'https://github.com/noerp/noerp-gradle-plugin'
+	vcsUrl = 'https://github.com/noerp/gradle-plugin'
 	description = 'NoERP plugin provided by noerp.org'
 	tags = ['noerp', 'ofbiz']
 
