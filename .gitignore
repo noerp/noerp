@@ -1,4 +1,5 @@
 *.class
+buildSrc/build
 appss/*/build
 vendor/*/*/build
 

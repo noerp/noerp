@@ -1,5 +1,5 @@
 defaultTasks 'build'
-
+/*
 buildscript {
   repositories {
     maven {
@@ -12,6 +12,7 @@ buildscript {
 }
 
 apply plugin: "com.gradle.plugin-publish"
+*/
 apply plugin: 'groovy'
 
 repositories {
@@ -25,7 +26,7 @@ dependencies {
 
 version = "0.2"
 group = "org.noerp"
-
+/*
 pluginBundle {
 
 	website = 'http://noerp.org/'
@@ -46,3 +47,4 @@ pluginBundle {
     	version = "0.2"
     }
 }
+*/
