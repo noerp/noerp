@@ -1,13 +1,8 @@
 dependencies {
-	compile project(':noerp-base')
-	compile project(':noerp-entity')
-	compile project(':noerp-security')
-	compile project(':noerp-service')
+	compile vendor('noerp:base:1.0.0')
+	compile vendor('noerp:entity:1.0.0')
+	compile vendor('noerp:security:1.0.0')
+	compile vendor('noerp:service:1.0.0')
 
 	compile fileTree(dir:'lib', include:'*.jar')
-	compile fileTree(dir:'../base/lib', include:'*.jar')
-	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
-
-	compile fileTree(dir:'../entity/lib', include:'*.jar')
-	compile fileTree(dir:'../service/lib', include:'*.jar')
 }

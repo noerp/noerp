@@ -1,8 +1,6 @@
 dependencies {
-	compile project(':noerp-base')
-	compile project(':noerp-entity')
+	compile vendor('noerp:base:1.0.0')
+	compile vendor('noerp:entity:1.0.0')
 
 	compile fileTree(dir:'lib', include:'*.jar')
-	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
-	compile fileTree(dir:'../entity/lib', include:'*.jar')
 }

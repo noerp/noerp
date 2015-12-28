@@ -1,4 +1,3 @@
-###############################################################################
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -15,17 +14,11 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-###############################################################################
 
-####
-# NoERP Debug Settings
-####
-
-# These top level switches are used before calling Log4J, or if Log4J is not used
-print.verbose=false
-print.timing=true
-print.info=true
-print.important=true
-print.warning=true
-print.error=true
-print.fatal=true
+org.noerp.base.conversion.BooleanConverters
+org.noerp.base.conversion.CollectionConverters
+org.noerp.base.conversion.DateTimeConverters
+org.noerp.base.conversion.JSONConverters
+org.noerp.base.conversion.MiscConverters
+org.noerp.base.conversion.NetConverters
+org.noerp.base.conversion.NumberConverters

@@ -1,25 +1,20 @@
 dependencies {
-    compile project(':noerp-start')
-	compile project(':noerp-base')
-	compile project(':noerp-entity')
-    compile project(':noerp-security')
-    compile project(':noerp-service')
-    compile project(':noerp-minilang')
+    compile vendor('noerp:start:1.0.0')
+	compile vendor('noerp:base:1.0.0')
+	compile vendor('noerp:catalina:1.0.0')
+	compile vendor('noerp:entity:1.0.0')
+    compile vendor('noerp:security:1.0.0')
+    compile vendor('noerp:service:1.0.0')
+    compile vendor('noerp:minilang:1.0.0')
 
+	compile fileTree(dir:'lib', include:'*.jar')
+	
+	/*
     compile 'org.apache.avalon.framework:avalon-framework-impl:4.3.1'
     compile 'net.sf.ezmorph:ezmorph:0.9.1'
     compile 'com.lowagie:itext:2.1.7'
     compile 'rome:rome:0.9'
-
-	compile fileTree(dir:'../base/lib', include:'*.jar')
-	compile fileTree(dir:'../base/lib/commons', include:'*.jar')
-	compile fileTree(dir:'../base/lib/j2eespecs', include:'*.jar')
-	compile fileTree(dir:'../base/lib/scripting', include:'*.jar')
-
-    compile fileTree(dir:'../catalina/lib', include:'*.jar')
-	compile fileTree(dir:'../entity/lib', include:'*.jar')
-    compile fileTree(dir:'../service/lib', include:'*.jar')
-
+	*/
 }
 
 sourceSets.main.java {

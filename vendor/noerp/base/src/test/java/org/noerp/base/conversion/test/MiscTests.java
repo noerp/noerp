@@ -33,6 +33,7 @@ import org.noerp.base.lang.SourceMonitored;
 import org.noerp.base.test.GenericTestCaseBase;
 import org.noerp.base.util.UtilGenerics;
 import org.noerp.base.util.UtilMisc;
+import org.noerp.base.util.Debug;
 
 @SourceMonitored
 public class MiscTests extends GenericTestCaseBase {
@@ -73,7 +74,7 @@ public class MiscTests extends GenericTestCaseBase {
     public void testPassthru() throws Exception {
         String string = "noerp";
         BigDecimal bigDecimal = new BigDecimal("1.234");
-        URL url = new URL("http://noerp.apache.org");
+        URL url = new URL("http://noerp.org");
         List<String> baseList = UtilMisc.toList("a", "1", "b", "2", "c", "3");
         ArrayList<String> arrayList = new ArrayList<String>();
         arrayList.addAll(baseList);

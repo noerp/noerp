@@ -32,6 +32,7 @@ import org.noerp.base.conversion.ConverterLoader;
 import org.noerp.base.conversion.Converters;
 import org.noerp.base.conversion.JSONConverters;
 import org.noerp.base.lang.JSON;
+import org.noerp.base.util.Debug;
 
 public class TestJSONConverters  extends TestCase {
     public TestJSONConverters(String name) {
