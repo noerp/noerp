@@ -29,10 +29,10 @@ import org.noerp.base.util.UtilMisc;
 import org.noerp.base.util.UtilValidate;
 import org.noerp.service.GenericServiceException;
 import org.noerp.service.ModelService;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 import org.w3c.dom.Element;
 
-public class ServiceTest extends OFBizTestCase {
+public class ServiceTest extends ServiceTestCase {
 
     public static final String module = ServiceTest.class.getName();
 

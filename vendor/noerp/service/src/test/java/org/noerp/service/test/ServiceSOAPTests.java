@@ -25,9 +25,9 @@ import java.util.Map;
 import org.noerp.base.util.UtilDateTime;
 import org.noerp.base.util.UtilGenerics;
 import org.noerp.entity.GenericValue;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 
-public class ServiceSOAPTests extends OFBizTestCase {
+public class ServiceSOAPTests extends ServiceTestCase {
 
     public final static String module = ServiceSOAPTests.class.getName();
 

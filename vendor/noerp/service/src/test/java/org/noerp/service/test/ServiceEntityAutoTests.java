@@ -28,9 +28,9 @@ import org.noerp.base.util.UtilProperties;
 import org.noerp.entity.GenericValue;
 import org.noerp.entity.util.EntityQuery;
 import org.noerp.service.ServiceUtil;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 
-public class ServiceEntityAutoTests extends OFBizTestCase {
+public class ServiceEntityAutoTests extends ServiceTestCase {
 
     public ServiceEntityAutoTests(String name) {
         super(name);

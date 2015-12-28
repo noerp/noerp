@@ -21,7 +21,7 @@ under the License.
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://noerp.org/dtds/services.xsd">
     <description>Content Component Services</description>
-    <vendor>OFBiz</vendor>
+    <vendor>NoERP</vendor>
 
     <!-- Email Related Services -->
     <service name="sendMailInterface" engine="interface" location="" invoke="">
@@ -127,7 +127,7 @@ under the License.
         <implements service="sendMailFromScreenInterface"/>
     </service>
     <service name="sendMailFromTemplateSetting" engine="simple"
-        location="component://common/script/org/ofbiz/common/email/EmailServices.xml" invoke="sendMailFromTemplateSetting">
+        location="component://common/script/org/noerp/common/email/EmailServices.xml" invoke="sendMailFromTemplateSetting">
         <description>Send Email From Email Template Setting Service</description>
         <implements service="sendMailInterface"/>
         <attribute name="emailTemplateSettingId" type="String" mode="IN" optional="false"/>

@@ -20,12 +20,12 @@ under the License.
 
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://noerp.org/dtds/services.xsd">
-    <description>OFBIZ CDyne Services: for info see http://www.cdyne.com/developers/overview.aspx</description>
-    <vendor>OFBiz</vendor>
+    <description>NoERP CDyne Services: for info see http://www.cdyne.com/developers/overview.aspx</description>
+    <vendor>NoERP</vendor>
     <version>1.0</version>
 
     <service name="cdynePostalAddressFillInCounty" engine="simple" auth="false"
-        location="component://common/script/org/ofbiz/common/CdyneServices.xml" invoke="cdynePostalAddressFillInCounty">
+        location="component://common/script/org/noerp/common/CdyneServices.xml" invoke="cdynePostalAddressFillInCounty">
         <description>Use the CdyneReturnCityState service to fill in the County on a PostalAddress. Can be called as with a SECA rule.</description>
         <attribute name="contactMechId" type="String" mode="IN" optional="false"/>
     </service>

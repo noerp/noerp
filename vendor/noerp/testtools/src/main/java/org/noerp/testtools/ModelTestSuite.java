@@ -40,7 +40,7 @@ import org.noerp.minilang.MiniLangException;
 import org.noerp.minilang.SimpleMethod;
 import org.noerp.service.LocalDispatcher;
 import org.noerp.service.ServiceContainer;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 import org.w3c.dom.Element;
 
 /**
@@ -175,8 +175,8 @@ public class ModelTestSuite {
             }
         } else if (test instanceof EntityTestCase) {
             ((EntityTestCase)test).setDelegator(delegator);
-            if (test instanceof OFBizTestCase) {
-                ((OFBizTestCase)test).setDispatcher(dispatcher);
+            if (test instanceof ServiceTestCase) {
+                ((ServiceTestCase)test).setDispatcher(dispatcher);
             }
         }
     }

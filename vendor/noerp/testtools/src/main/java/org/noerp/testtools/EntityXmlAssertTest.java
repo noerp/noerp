@@ -31,10 +31,10 @@ import org.noerp.base.util.UtilValidate;
 import org.noerp.entity.GenericValue;
 import org.noerp.entity.util.EntityDataAssert;
 import org.noerp.entity.util.EntitySaxReader;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 import org.w3c.dom.Element;
 
-public class EntityXmlAssertTest extends OFBizTestCase {
+public class EntityXmlAssertTest extends ServiceTestCase {
 
     public static final String module = ServiceTest.class.getName();
 

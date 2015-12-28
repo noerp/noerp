@@ -22,7 +22,7 @@ package org.noerp.service.testtools;
 import org.noerp.entity.testtools.EntityTestCase;
 import org.noerp.service.LocalDispatcher;
 
-public class OFBizTestCase extends EntityTestCase {
+public class ServiceTestCase extends EntityTestCase {
 
     protected LocalDispatcher dispatcher = null;
 
@@ -30,7 +30,7 @@ public class OFBizTestCase extends EntityTestCase {
         return dispatcher;
     }
 
-    public OFBizTestCase(String name) {
+    public ServiceTestCase(String name) {
         super(name);
     }
 

@@ -22,9 +22,9 @@ import java.util.Map;
 
 import org.noerp.base.util.UtilMisc;
 import org.noerp.service.ModelService;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 
-public class ServiceEngineTests extends OFBizTestCase {
+public class ServiceEngineTests extends ServiceTestCase {
 
     public ServiceEngineTests(String name) {
         super(name);

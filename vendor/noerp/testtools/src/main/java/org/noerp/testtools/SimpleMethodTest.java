@@ -34,7 +34,7 @@ import org.noerp.security.Security;
 import org.noerp.security.SecurityConfigurationException;
 import org.noerp.security.SecurityFactory;
 import org.noerp.service.ModelService;
-import org.noerp.service.testtools.OFBizTestCase;
+import org.noerp.service.testtools.ServiceTestCase;
 
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -42,7 +42,7 @@ import org.springframework.mock.web.MockServletContext;
 
 import org.w3c.dom.Element;
 
-public class SimpleMethodTest extends OFBizTestCase {
+public class SimpleMethodTest extends ServiceTestCase {
 
     public static final String module = ServiceTest.class.getName();
 
