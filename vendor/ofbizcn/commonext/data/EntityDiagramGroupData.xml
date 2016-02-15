@@ -124,14 +124,14 @@ under the License.
     <EntityGroupEntry entityGroupId="6050" entityOrPackage="org.ofbiz.common" applEnumId="ESIA_INCLUDE"/>
 
     <EntityGroup entityGroupId="6100" entityGroupName="Detail Content: Content"/>
-    <EntityGroupEntry entityGroupId="6100" entityOrPackage="org.ofbiz.content.content" applEnumId="ESIA_INCLUDE"/>
-    <EntityGroupEntry entityGroupId="6100" entityOrPackage="org.ofbiz.content.data" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6100" entityOrPackage="com.ofbizcn.content.content" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6100" entityOrPackage="com.ofbizcn.content.data" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6110" entityGroupName="Detail Content: Survey"/>
-    <EntityGroupEntry entityGroupId="6110" entityOrPackage="org.ofbiz.content.survey" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6110" entityOrPackage="com.ofbizcn.content.survey" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6120" entityGroupName="Detail Content: Other"/>
-    <EntityGroupEntry entityGroupId="6120" entityOrPackage="org.ofbiz.content.document" applEnumId="ESIA_INCLUDE"/>
-    <EntityGroupEntry entityGroupId="6120" entityOrPackage="org.ofbiz.content.preference" applEnumId="ESIA_INCLUDE"/>
-    <EntityGroupEntry entityGroupId="6120" entityOrPackage="org.ofbiz.content.website" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6120" entityOrPackage="com.ofbizcn.content.document" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6120" entityOrPackage="com.ofbizcn.content.preference" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6120" entityOrPackage="com.ofbizcn.content.website" applEnumId="ESIA_INCLUDE"/>
 
     <EntityGroup entityGroupId="6200" entityGroupName="Detail Party: Party"/>
     <EntityGroupEntry entityGroupId="6200" entityOrPackage="org.ofbiz.party.party" applEnumId="ESIA_INCLUDE"/>
@@ -256,7 +256,7 @@ under the License.
     <EntityGroupEntry entityGroupId="6910" entityOrPackage="org.ofbiz.service" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6920" entityGroupName="Technical: Web"/>
     <EntityGroupEntry entityGroupId="6920" entityOrPackage="org.noerp.webapp" applEnumId="ESIA_INCLUDE"/>
-    <EntityGroupEntry entityGroupId="6920" entityOrPackage="org.ofbiz.content.website" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6920" entityOrPackage="com.ofbizcn.content.website" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6930" entityGroupName="Technical: Login and Security"/>
     <EntityGroupEntry entityGroupId="6930" entityOrPackage="org.ofbiz.security" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6990" entityGroupName="Technical: POS, OAGIS, Other"/>

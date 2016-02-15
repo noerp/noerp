@@ -8260,18 +8260,6 @@
         <value xml:lang="zh">指定的联系信息不属于你，你不能浏览或编辑它。</value>
         <value xml:lang="zh_TW">指定的聯絡資訊不屬於您,您不能檢視或編輯它.</value>
     </property>
-    <property key="PartyMyCommunications">
-        <value xml:lang="de">Meine Kommunikationen</value>
-        <value xml:lang="en">My Communications</value>
-        <value xml:lang="fr">Mes communications</value>
-        <value xml:lang="hi_IN">मेरा संचार</value>
-        <value xml:lang="it">Proprie comunicazioni</value>
-        <value xml:lang="ja">私の通信</value>
-        <value xml:lang="pt_BR">Minhas comunicações</value>
-        <value xml:lang="vi">Truyền thông của tôi</value>
-        <value xml:lang="zh">我的沟通</value>
-        <value xml:lang="zh_TW">我的通訊</value>
-    </property>
     <property key="PartyName">
         <value xml:lang="cs">Jméno</value>
         <value xml:lang="de">Name</value>

@@ -171,7 +171,7 @@
     <service name="checkContentPermission"
         transaction-timeout="7200"
         auth="false" engine="java" invoke="checkContentPermission"
-        location="org.ofbiz.content.content.ContentPermissionServices">
+        location="com.ofbizcn.content.content.ContentPermissionServices">
         <description>Check for permission to perform operation on Content</description>
         <attribute mode="IN" name="targetOperationList" optional="true" type="List"/>
         <attribute mode="IN" name="contentPurposeList" optional="true" type="List"/>
@@ -194,11 +194,11 @@
         <attribute mode="IN" name="partyId" optional="true" type="String"/>
         <attribute mode="IN" name="userLoginId" optional="true" type="String"/>
         <attribute mode="OUT" name="permissionStatus" optional="true" type="String"/>
-        <attribute mode="OUT" name="permissionRecorder" optional="true" type="org.ofbiz.content.content.PermissionRecorder"/>
+        <attribute mode="OUT" name="permissionRecorder" optional="true" type="com.ofbizcn.content.content.PermissionRecorder"/>
     </service>
 
     <service name="findRelatedContent" default-entity-name="Content" engine="java"
-            location="org.ofbiz.content.content.ContentServices" invoke="findRelatedContent" auth="true">
+            location="com.ofbizcn.content.content.ContentServices" invoke="findRelatedContent" auth="true">
         <description>Create a Content</description>
         <attribute mode="IN" name="currentContent" optional="false" type="org.ofbiz.entity.GenericValue"/>
         <attribute mode="IN" name="toFrom" optional="true" type="String"/>
@@ -215,7 +215,7 @@
     <!--Content Assoc services.-->
     <!-- TODO: old permission service; being replaced with genericContentPermission -->
     <service name="checkAssocPermission" engine="java" transaction-timeout="7200" auth="true"
-            location="org.ofbiz.content.content.ContentPermissionServices" invoke="checkAssocPermission">
+            location="com.ofbizcn.content.content.ContentPermissionServices" invoke="checkAssocPermission">
         <description>Check for permission to perform operation on Content</description>
         <attribute mode="IN" name="targetOperationList" optional="true" type="List"/>
         <attribute mode="IN" name="contentPurposeList" optional="true" type="List"/>
@@ -232,8 +232,8 @@
         <attribute mode="IN" name="contentAssocPredicateId" optional="true" type="String"/>
         <attribute mode="IN" name="displayFailCond" optional="true" type="Boolean"/>
         <attribute mode="OUT" name="permissionStatus" optional="true" type="String"/>
-        <attribute mode="OUT" name="permissionRecorderTo" optional="true" type="org.ofbiz.content.content.PermissionRecorder"/>
-        <attribute mode="OUT" name="permissionRecorder" optional="true" type="org.ofbiz.content.content.PermissionRecorder"/>
+        <attribute mode="OUT" name="permissionRecorderTo" optional="true" type="com.ofbizcn.content.content.PermissionRecorder"/>
+        <attribute mode="OUT" name="permissionRecorder" optional="true" type="com.ofbizcn.content.content.PermissionRecorder"/>
     </service>
 
     <service name="assocContent" engine="simple" default-entity-name="ContentAssoc"  auth="true"

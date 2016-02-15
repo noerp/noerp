@@ -86,7 +86,7 @@
 
     <!-- these should be deprecated in favor of the ECA style triggers on the base service -->
     <service name="createDataResourceAndText" engine="java" default-entity-name="DataResource" auth="true"
-            location="org.ofbiz.content.data.DataServices" invoke="createDataResourceAndText">
+            location="com.ofbizcn.content.data.DataServices" invoke="createDataResourceAndText">
         <description>Create a DataResource and, possibly, ElectronicText or ImageDataResource</description>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
         <auto-attributes include="nonpk" mode="IN" optional="true"/>
@@ -96,7 +96,7 @@
         <attribute name="skipPermissionCheck" type="String" mode="IN" optional="true"/>
     </service>
     <service name="updateDataResourceAndText" engine="java" default-entity-name="DataResource" auth="true"
-            location="org.ofbiz.content.data.DataServices" invoke="updateDataResourceAndText">
+            location="com.ofbizcn.content.data.DataServices" invoke="updateDataResourceAndText">
         <description>Create a DataResource and, possibly, ElectronicText or ImageDataResource</description>
         <auto-attributes include="pk" mode="IN" optional="true"/>
         <auto-attributes include="nonpk" mode="IN" optional="true"/>
@@ -231,7 +231,7 @@
 
     <!-- File services -->
     <service name="createFile" engine="java"
-            location="org.ofbiz.content.data.DataServices" invoke="createFile" auth="true">
+            location="com.ofbizcn.content.data.DataServices" invoke="createFile" auth="true">
         <description>Create a File</description>
         <implements service="createDataResource"/>
         <attribute mode="IN" name="dataResource" optional="true" type="org.ofbiz.entity.GenericValue"/>
@@ -242,12 +242,12 @@
         <attribute mode="IN" name="objectInfo" optional="true" type="String"/>
     </service>
     <service name="createAnonFile" engine="java"
-            location="org.ofbiz.content.data.DataServices" invoke="createFileNoPerm" auth="false">
+            location="com.ofbizcn.content.data.DataServices" invoke="createFileNoPerm" auth="false">
         <description>Create a File No Permission Required</description>
         <implements service="createFile"/>
     </service>
     <service name="updateFile" engine="java"
-            location="org.ofbiz.content.data.DataServices" invoke="updateFile" auth="true">
+            location="com.ofbizcn.content.data.DataServices" invoke="updateFile" auth="true">
         <description>Update a File</description>
         <attribute mode="IN" name="dataResource" optional="true" type="org.ofbiz.entity.GenericValue"/>
         <attribute mode="IN" name="binData" optional="true" type="java.nio.ByteBuffer"/>
@@ -266,7 +266,7 @@
 
     <!-- Cleared associated DataResource rendered cache from UtilCache. -->
     <service name="clearAssociatedRenderCache" engine="java" auth="true" default-entity-name="DataResource"
-            location="org.ofbiz.content.data.DataServices" invoke="clearAssociatedRenderCache">
+            location="com.ofbizcn.content.data.DataServices" invoke="clearAssociatedRenderCache">
         <auto-attributes include="pk" mode="IN" />
     </service>
 

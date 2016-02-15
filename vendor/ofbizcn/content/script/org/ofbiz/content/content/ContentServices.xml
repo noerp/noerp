@@ -1250,7 +1250,7 @@
     
     <simple-method method-name="forceIndexContentKeywords" short-description="induce all the keywords of a content">
         <entity-one entity-name="Content" value-field="content"/>
-        <call-class-method class-name="org.ofbiz.content.content.ContentKeywordIndex" method-name="forceIndexKeywords">
+        <call-class-method class-name="com.ofbizcn.content.content.ContentKeywordIndex" method-name="forceIndexKeywords">
             <field field="content" type="org.ofbiz.entity.GenericValue"/>
         </call-class-method>
     </simple-method>
@@ -1271,7 +1271,7 @@
         </if-empty>
 
         <!-- induce keywords-->
-        <call-class-method class-name="org.ofbiz.content.content.ContentKeywordIndex" method-name="indexKeywords">
+        <call-class-method class-name="com.ofbizcn.content.content.ContentKeywordIndex" method-name="indexKeywords">
             <field field="contentInstance" type="org.ofbiz.entity.GenericValue"/>
         </call-class-method>
     </simple-method>

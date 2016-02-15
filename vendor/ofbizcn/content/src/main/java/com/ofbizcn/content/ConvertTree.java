@@ -55,7 +55,7 @@ orders, invoices etc..
 In order ta make this service active add the following to the service definition file:
 
 <service name="convertTree"  auth="true" engine="java" invoke="convertTree" transaction-timeout="3600"
-                 location="org.ofbiz.content.tree.ConvertTree">
+                 location="com.ofbizcn.content.tree.ConvertTree">
     <description>Convert DOS tree output to ContentAssoc tree.</description>
     <attribute name="file" type="String" mode="IN" optional="false"/>
 </service>
