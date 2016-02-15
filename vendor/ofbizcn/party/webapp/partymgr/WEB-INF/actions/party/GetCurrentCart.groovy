@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import org.ofbiz.entity.util.EntityUtil;
+import org.noerp.entity.util.EntityUtil;
 
 partyId = partyId ?: parameters.partyId;
 

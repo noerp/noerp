@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import org.ofbiz.entity.condition.EntityOperator;
-import org.ofbiz.entity.condition.EntityCondition;
+import org.noerp.entity.condition.EntityOperator;
+import org.noerp.entity.condition.EntityCondition;
 
 import javolution.util.FastList;
 

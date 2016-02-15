@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import org.ofbiz.base.util.*;
-import org.ofbiz.entity.util.EntityUtil;
+import org.noerp.base.util.*;
+import org.noerp.entity.util.EntityUtil;
 import javolution.util.FastList;
 
 communicationEvent = from("CommunicationEvent").where("communicationEventId", parameters.communicationEventId).cache(true).queryOne();

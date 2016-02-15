@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- import org.ofbiz.entity.*;
- import org.ofbiz.entity.util.EntityUtil;
+ import org.noerp.entity.*;
+ import org.noerp.entity.util.EntityUtil;
 
  roleTypeAndParty = from("RoleTypeAndParty").where("partyId", parameters.partyId, "roleTypeId", "ACCOUNT").queryList();
  if (roleTypeAndParty) {

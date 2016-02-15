@@ -17,9 +17,9 @@
  * under the License.
  */
 
-import org.ofbiz.base.util.*;
-import org.ofbiz.entity.util.EntityUtil;
-import org.ofbiz.base.component.ComponentConfig;
+import org.noerp.base.util.*;
+import org.noerp.entity.util.EntityUtil;
+import org.noerp.base.component.ComponentConfig;
 
 if (parameters.communicationEventId) {
     context.communicationEventRole = from("CommunicationEventRole")

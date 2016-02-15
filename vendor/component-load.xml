@@ -20,6 +20,8 @@ under the License.
 
 <component-loader xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://noerp.org/dtds/component-loader.xsd">
+        
+    <!-- noerp framework -->
     <load-component component-location="noerp/base"/>
     <load-component component-location="noerp/geronimo"/>
 	<load-component component-location="noerp/entity"/>
@@ -36,7 +38,11 @@ under the License.
     <load-component component-location="noerp/assets"/>
     <load-component component-location="noerp/webtools"/>
 
+	<!-- ofbizcn base components -->
     <load-component component-location="ofbizcn/tomahawk"/>
     <load-component component-location="ofbizcn/flatgrey"/>
+    <load-component component-location="ofbizcn/commonext"/>
+    <load-component component-location="ofbizcn/content"/>
+	<load-component component-location="ofbizcn/party"/>
 
 </component-loader>

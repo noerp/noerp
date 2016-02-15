@@ -255,7 +255,7 @@ under the License.
     <EntityGroupEntry entityGroupId="6910" entityOrPackage="org.ofbiz.entity" applEnumId="ESIA_INCLUDE"/>
     <EntityGroupEntry entityGroupId="6910" entityOrPackage="org.ofbiz.service" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6920" entityGroupName="Technical: Web"/>
-    <EntityGroupEntry entityGroupId="6920" entityOrPackage="org.ofbiz.webapp" applEnumId="ESIA_INCLUDE"/>
+    <EntityGroupEntry entityGroupId="6920" entityOrPackage="org.noerp.webapp" applEnumId="ESIA_INCLUDE"/>
     <EntityGroupEntry entityGroupId="6920" entityOrPackage="org.ofbiz.content.website" applEnumId="ESIA_INCLUDE"/>
     <EntityGroup entityGroupId="6930" entityGroupName="Technical: Login and Security"/>
     <EntityGroupEntry entityGroupId="6930" entityOrPackage="org.ofbiz.security" applEnumId="ESIA_INCLUDE"/>

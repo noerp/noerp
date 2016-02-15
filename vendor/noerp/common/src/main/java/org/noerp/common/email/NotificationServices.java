@@ -59,7 +59,7 @@ import freemarker.template.TemplateException;
  * <blockquote>
  * <pre>
  *     &lt;service name="sendPoPickupNotification" engine="java"
- *             location="org.noerp.content.email.NotificationServices" invoke="sendNotification"&gt;
+ *             location="com.ofbizcn.content.email.NotificationServices" invoke="sendNotification"&gt;
  *         &lt;description&gt;Sends notification based on a message template&lt;/description&gt;
  *         &lt;implements service="sendNotificationInterface"/&gt;
  *         &lt;attribute name="orderId" type="String" mode="IN" optional="false"/&gt;

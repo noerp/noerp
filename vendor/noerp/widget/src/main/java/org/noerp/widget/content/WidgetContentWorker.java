@@ -30,7 +30,7 @@ public class WidgetContentWorker {
         try {
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
             // note: loadClass is necessary for these since this class doesn't know anything about them at compile time
-            contentWorker = (ContentWorkerInterface) loader.loadClass("org.noerp.content.content.ContentWorker").newInstance();
+            contentWorker = (ContentWorkerInterface) loader.loadClass("com.ofbizcn.content.content.ContentWorker").newInstance();
         } catch (ClassNotFoundException e) {
             Debug.logError(e, "Could not pre-initialize dynamically loaded class: ", module);
         } catch (IllegalAccessException e) {

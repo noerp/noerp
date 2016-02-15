@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import org.ofbiz.party.contact.ContactMechWorker;
+import org.noerp.party.contact.ContactMechWorker;
 
 partyId = parameters.partyId;
 context.partyId = partyId;

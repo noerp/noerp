@@ -17,11 +17,11 @@
  * under the License.
  */
 
-import org.ofbiz.entity.util.EntityFindOptions;
-import org.ofbiz.entity.condition.*;
-import org.ofbiz.entity.transaction.TransactionUtil;
-import org.ofbiz.base.util.*
-import org.ofbiz.entity.util.EntityUtilProperties;
+import org.noerp.entity.util.EntityFindOptions;
+import org.noerp.entity.condition.*;
+import org.noerp.entity.transaction.TransactionUtil;
+import org.noerp.base.util.*
+import org.noerp.entity.util.EntityUtilProperties;
 
 module = "showvisits.groovy";
 

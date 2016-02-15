@@ -1,0 +1,19 @@
+dependencies {
+	compile vendor('noerp:base:1.0.0')
+	compile vendor('noerp:entity:1.0.0')
+	compile vendor('noerp:security:1.0.0')
+	compile vendor('noerp:service:1.0.0')
+	compile vendor('noerp:minilang:1.0.0')
+	compile vendor('noerp:common:1.0.0')
+	compile vendor('noerp:widget:1.0.0')
+	//compile vendor('ofbizcn:content:1.0.0')
+
+	compile fileTree(dir:'lib', include:'*.jar')
+}
+
+sourceSets.main.java {
+	srcDirs = ["src/main/java"]
+	exclude "com/ofbizcn/content/report/JREntityListIteratorDataSource.java"
+	exclude "com/ofbizcn/content/report/JRMapCollectionDataSource.java"
+	exclude "com/ofbizcn/content/openoffice/*.java"
+}

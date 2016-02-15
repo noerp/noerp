@@ -17,9 +17,9 @@
  * under the License.
  */
 
-import org.ofbiz.entity.condition.*;
-import org.ofbiz.entity.util.*
-import org.ofbiz.base.util.*;
+import org.noerp.entity.condition.*;
+import org.noerp.entity.util.*
+import org.noerp.base.util.*;
 
 lastDate = UtilDateTime.addDaysToTimestamp(UtilDateTime.nowTimestamp(), -21); // should be there the last 3 weeks.
 visits = select('partyId')

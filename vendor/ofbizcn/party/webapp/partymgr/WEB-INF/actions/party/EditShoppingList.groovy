@@ -17,11 +17,11 @@
  * under the License.
  */
 
-import org.ofbiz.entity.util.EntityUtil;
-import org.ofbiz.base.util.UtilHttp;
-import org.ofbiz.product.catalog.CatalogWorker;
-import org.ofbiz.webapp.website.WebSiteWorker;
-import org.ofbiz.entity.util.EntityUtilProperties;
+import org.noerp.entity.util.EntityUtil;
+import org.noerp.base.util.UtilHttp;
+import org.noerp.product.catalog.CatalogWorker;
+import org.noerp.webapp.website.WebSiteWorker;
+import org.noerp.entity.util.EntityUtilProperties;
 
 
 prodCatalogId = CatalogWorker.getCurrentCatalogId(request);

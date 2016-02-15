@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import org.ofbiz.base.util.*;
+import org.noerp.base.util.*;
 
 //partyAcctgPrefAndGroupList
 partyAcctgPrefAndGroupList = [];

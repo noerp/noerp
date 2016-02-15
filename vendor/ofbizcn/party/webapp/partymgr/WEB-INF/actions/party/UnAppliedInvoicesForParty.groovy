@@ -16,15 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import org.ofbiz.entity.*;
-import org.ofbiz.base.util.Debug;
-import org.ofbiz.common.*;
-import org.ofbiz.webapp.control.*;
-import org.ofbiz.accounting.invoice.*;
-import org.ofbiz.accounting.payment.*;
-import org.ofbiz.entity.*;
-import org.ofbiz.entity.condition.*;
-import org.ofbiz.entity.util.*;
+import org.noerp.entity.*;
+import org.noerp.base.util.Debug;
+import org.noerp.common.*;
+import org.noerp.webapp.control.*;
+import org.noerp.accounting.invoice.*;
+import org.noerp.accounting.payment.*;
+import org.noerp.entity.*;
+import org.noerp.entity.condition.*;
+import org.noerp.entity.util.*;
 import javolution.util.FastMap;
 
 Boolean actualCurrency = new Boolean(context.actualCurrency);

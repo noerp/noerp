@@ -25,12 +25,12 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.Map;
 
-import org.ofbiz.base.util.KeyStoreUtil;
-import org.ofbiz.entity.Delegator;
-import org.ofbiz.entity.GenericEntityException;
-import org.ofbiz.entity.GenericValue;
-import org.ofbiz.service.DispatchContext;
-import org.ofbiz.service.ServiceUtil;
+import org.noerp.base.util.KeyStoreUtil;
+import org.noerp.entity.Delegator;
+import org.noerp.entity.GenericEntityException;
+import org.noerp.entity.GenericValue;
+import org.noerp.service.DispatchContext;
+import org.noerp.service.ServiceUtil;
 
 /**
  * CertificateServices

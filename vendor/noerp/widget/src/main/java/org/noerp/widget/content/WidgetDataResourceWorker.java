@@ -30,7 +30,7 @@ public class WidgetDataResourceWorker {
         try {
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
             // note: loadClass is necessary for these since this class doesn't know anything about them at compile time
-            dataresourceWorker = (DataResourceWorkerInterface) loader.loadClass("org.noerp.content.data.DataResourceWorker").newInstance();
+            dataresourceWorker = (DataResourceWorkerInterface) loader.loadClass("com.ofbizcn.content.data.DataResourceWorker").newInstance();
         } catch (ClassNotFoundException e) {
             Debug.logError(e, "Could not pre-initialize dynamically loaded class: ", module);
         } catch (IllegalAccessException e) {

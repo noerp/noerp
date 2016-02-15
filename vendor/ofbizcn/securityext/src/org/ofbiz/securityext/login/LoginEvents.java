@@ -31,27 +31,27 @@ import javolution.util.FastMap;
 
 import org.apache.commons.lang.RandomStringUtils;
 
-import org.ofbiz.base.util.Debug;
-import org.ofbiz.base.util.UtilFormatOut;
-import org.ofbiz.base.util.UtilHttp;
-import org.ofbiz.base.util.UtilMisc;
-import org.ofbiz.base.util.UtilProperties;
-import org.ofbiz.base.util.UtilValidate;
-import org.ofbiz.base.util.string.FlexibleStringExpander;
-import org.ofbiz.common.login.LoginServices;
-import org.ofbiz.base.crypto.HashCrypt;
-import org.ofbiz.entity.Delegator;
-import org.ofbiz.entity.GenericEntityException;
-import org.ofbiz.entity.GenericValue;
-import org.ofbiz.entity.util.EntityQuery;
-import org.ofbiz.entity.util.EntityUtilProperties;
-import org.ofbiz.party.contact.ContactHelper;
-import org.ofbiz.product.product.ProductEvents;
-import org.ofbiz.product.store.ProductStoreWorker;
-import org.ofbiz.service.GenericServiceException;
-import org.ofbiz.service.LocalDispatcher;
-import org.ofbiz.service.ModelService;
-import org.ofbiz.webapp.control.LoginWorker;
+import org.noerp.base.util.Debug;
+import org.noerp.base.util.UtilFormatOut;
+import org.noerp.base.util.UtilHttp;
+import org.noerp.base.util.UtilMisc;
+import org.noerp.base.util.UtilProperties;
+import org.noerp.base.util.UtilValidate;
+import org.noerp.base.util.string.FlexibleStringExpander;
+import org.noerp.common.login.LoginServices;
+import org.noerp.base.crypto.HashCrypt;
+import org.noerp.entity.Delegator;
+import org.noerp.entity.GenericEntityException;
+import org.noerp.entity.GenericValue;
+import org.noerp.entity.util.EntityQuery;
+import org.noerp.entity.util.EntityUtilProperties;
+import org.noerp.party.contact.ContactHelper;
+import org.noerp.product.product.ProductEvents;
+import org.noerp.product.store.ProductStoreWorker;
+import org.noerp.service.GenericServiceException;
+import org.noerp.service.LocalDispatcher;
+import org.noerp.service.ModelService;
+import org.noerp.webapp.control.LoginWorker;
 
 /**
  * LoginEvents - Events for UserLogin and Security handling.

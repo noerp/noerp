@@ -41,7 +41,7 @@ under the License.
   <!-- ========================================================= -->
   <!-- org.ofbiz.party.agreement -->
   <!-- ========================================================= -->
-
+<!-- 
     <entity entity-name="Addendum"
             package-name="org.ofbiz.party.agreement"
             title="Addendum Entity">
@@ -60,6 +60,8 @@ under the License.
         <key-map field-name="agreementItemSeqId"/>
       </relation>
     </entity>
+     -->
+    <!-- 
     <entity entity-name="Agreement"
             package-name="org.ofbiz.party.agreement"
             title="Agreement Entity">
@@ -112,6 +114,7 @@ under the License.
         <key-map field-name="agreementTypeId"/>
       </relation>
     </entity>
+    
     <entity entity-name="AgreementAttribute"
             package-name="org.ofbiz.party.agreement"
             title="Agreement Attribute Entity">
@@ -604,7 +607,7 @@ under the License.
             <key-map field-name="agreementId"/>
         </relation>
     </view-entity>
-
+ -->
   <!-- ========================================================= -->
   <!-- org.ofbiz.party.communication -->
   <!-- ========================================================= -->
@@ -742,9 +745,11 @@ under the License.
         <relation type="one" fk-name="COM_EVNT_TCM" title="To" rel-entity-name="ContactMech">
             <key-map field-name="contactMechIdTo" rel-field-name="contactMechId"/>
         </relation>
+        <!-- 
         <relation type="one" fk-name="COM_EVNT_CLST" rel-entity-name="ContactList">
             <key-map field-name="contactListId"/>
         </relation>
+         -->
         <relation type="one" fk-name="COM_EVNT_MIMETYPE" rel-entity-name="MimeType">
             <key-map field-name="contentMimeTypeId" rel-field-name="mimeTypeId"/>
         </relation>
@@ -755,6 +760,7 @@ under the License.
             <index-field name="messageId"/>
         </index>
     </entity>
+    <!-- 
     <view-entity entity-name="CommunicationEventAndSubscr" package-name="org.ofbiz.party.communication" title="Communication Event And Role View Entity">
         <member-entity entity-alias="SC" entity-name="SubscriptionCommEvent"/>
         <member-entity entity-alias="SU" entity-name="Subscription"/>
@@ -766,6 +772,7 @@ under the License.
             <key-map field-name="subscriptionId"/>
         </view-link>
     </view-entity>
+    
     <view-entity entity-name="CommunicationEventAndProduct" package-name="org.ofbiz.party.communication" title="Communication Event And Product View Entity">
         <member-entity entity-alias="CP" entity-name="CommunicationEventProduct"/>
         <member-entity entity-alias="CE" entity-name="CommunicationEvent"/>
@@ -909,6 +916,7 @@ under the License.
         <key-map field-name="statusId"/>
       </relation>
     </entity>
+     -->
     <entity entity-name="CommunicationEventType"
             package-name="org.ofbiz.party.communication"
             title="Communication Event Type Entity" default-resource-name="PartyEntityLabels">
@@ -1407,6 +1415,7 @@ under the License.
             <key-map field-name="contactMechId" />
         </view-link>
     </view-entity>
+    <!-- 
     <view-entity entity-name="ContactListPartyAndContactMech"
         package-name="org.ofbiz.party.contact">
         <member-entity entity-alias="CLP" entity-name="ContactListParty"/>
@@ -1428,11 +1437,11 @@ under the License.
             <key-map field-name="fromDate"/>
         </relation>
     </view-entity>
-
+ -->
   <!-- ========================================================= -->
   <!-- org.ofbiz.party.need -->
   <!-- ========================================================= -->
-
+<!-- 
     <entity entity-name="NeedType"
             package-name="org.ofbiz.party.need"
             title="Need Type Entity">
@@ -1483,7 +1492,7 @@ under the License.
         <key-map field-name="productCategoryId"/>
       </relation>
     </entity>
-
+ -->
   <!-- ========================================================= -->
   <!-- org.ofbiz.party.party -->
   <!-- ========================================================= -->
@@ -1558,6 +1567,7 @@ under the License.
         <index-field name="externalId"/>
       </index>
     </entity>
+    <!-- 
     <view-entity entity-name="PartyAcctgPrefAndGroup"
         package-name="org.ofbiz.party.party"
         title="PartyAcctgPreference and PartyGroup Entity">
@@ -1578,6 +1588,7 @@ under the License.
             <condition-expr entity-alias="PTYROLE" field-name="roleTypeId" operator="equals" value="INTERNAL_ORGANIZATIO"/>
         </entity-condition>
     </view-entity>
+     -->
     <view-entity entity-name="PartyAndGroup"
         package-name="org.ofbiz.party.party"
         title="Party and Party Group View Entity">
@@ -1654,6 +1665,7 @@ under the License.
         <key-map field-name="userLoginId"/>
       </relation>
     </view-entity>
+    <!-- 
   <view-entity entity-name="PartyDetailAndWorkEffortAssign"
     package-name="org.ofbiz.party.party"
     title="View to show the party assignment names for a workeffort with the partyStatus and AssignStatus">
@@ -1688,7 +1700,7 @@ under the License.
       <key-map field-name="partyId"/>
     </view-link>
   </view-entity>
-  
+   -->
      <entity entity-name="PartyIdentification"
             package-name="org.ofbiz.party.party"
             title="Party Identification Entity">
@@ -2220,9 +2232,11 @@ under the License.
       <relation type="one" fk-name="PARTY_PROF_PARTY" rel-entity-name="Party">
         <key-map field-name="partyId"/>
       </relation>
+      <!-- 
       <relation type="one" fk-name="PARTY_PROF_PSTORE" rel-entity-name="ProductStore">
         <key-map field-name="productStoreId"/>
       </relation>
+       -->
     </entity>
     <entity entity-name="PartyRelationship"
             package-name="org.ofbiz.party.party"
