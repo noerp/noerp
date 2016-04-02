@@ -4,9 +4,9 @@ import org.gradle.api.DefaultTask
 
 class UpdateTask extends DefaultTask {
 
-
-	def install(){
-		println "install task"
+	UpdateTask(){
+		description = "Update noerp vendors."
+		group = "NoERP"
 	}
 
 }

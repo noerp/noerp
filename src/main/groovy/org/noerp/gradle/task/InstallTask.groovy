@@ -5,8 +5,9 @@ import org.gradle.api.DefaultTask
 class InstallTask extends DefaultTask {
 
 
-	def install(){
-		println "install task"
+	InstallTask(){
+		description = "Install noerp application from a java jar package"
+		group = "NoERP"
 	}
 
 }

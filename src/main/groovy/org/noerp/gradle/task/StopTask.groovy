@@ -5,8 +5,9 @@ import org.gradle.api.DefaultTask
 class StopTask extends DefaultTask {
 
 
-	def install(){
-		println "install task"
+	StopTask(){
+		description = "Stop noerp application."
+		group = "NoERP"
 	}
 
 }

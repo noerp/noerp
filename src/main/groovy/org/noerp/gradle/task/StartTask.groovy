@@ -8,6 +8,13 @@ class StartTask extends DefaultTask {
 
 	Boolean debug = false
 
+	StartTask(){
+		super()
+
+		description = "Start noerp application from a java jar package"
+		group = "NoERP"
+	}
+
 	@TaskAction
 	def start(){
 
@@ -16,5 +23,4 @@ class StartTask extends DefaultTask {
 		myExec.commandLine = "java -jar bin/noerp.jar"
 		myExec.workingDir = "."
 	}
-
 }
