@@ -18,79 +18,79 @@
 # under the License.
 #####################################################################
 #
-# ofbiz        This shell script takes care of starting and stopping
-#              the OFBiz subsystem. This version is for Ubuntu systems
+# noerp        This shell script takes care of starting and stopping
+#              the NoERP subsystem. This version is for Ubuntu systems
 #
 # chkconfig: - 80 10
-# description: OFBiz server
+# description: NoERP server
 
-# the userlogin the script should run under and is the home dirname, in this case /home/ofbiz/ofbiz
-OFBIZUSER="ofbiz"
-OFBIZDIR="ofbiz"
+# the userlogin the script should run under and is the home dirname, in this case /home/noerp/noerp
+NOERPUSER="noerp"
+NOERPDIR="noerp"
 
 #============== no need to change anything below this line =======================
 
-# Start OFBiz
+# Start NoERP
 start() {
     if [ "$USER" = "" ]; then
         echo "Mounting data disk at boottime here"
 #        mount /dev/sdg /data
     fi
     running
-    if [ "$OFBIZ_PROCS" = "" ]; then
-        echo "Ofbiz is already running..."
+    if [ "$NOERP_PROCS" = "" ]; then
+        echo "NoERP is already running..."
         return 0
     fi
-    if [ "$USER" = "$OFBIZUSER" ]; then
-        echo "starting standard /home/$OFBIZUSER/$OFBIZDIR/startofbiz.sh"
-        cd /home/$OFBIZUSER/$OFBIZDIR
-        ./startofbiz.sh
+    if [ "$USER" = "$NOERPUSER" ]; then
+        echo "starting standard /home/$NOERPUSER/$NOERPDIR/bin/start"
+        cd /home/$NOERPUSER/$NOERPDIR
+        ./startnoerp.sh
         if [ $? = 0 ]; then 
             echo "start success"
         else
-            echo "starting ofbiz user: $OFBIZUSER in dir: $OFBIZDIR failed return code: $?"
+            echo "starting noerp user: $NOERPUSER in dir: $NOERPDIR failed return code: $?"
         fi
         return 0
     fi
 }
 
 stop() {
-    if [ "$USER" = "$OFBIZUSER" ]; then
-        echo "stopping standard /home/$OFBIZUSER/$OFBIZDIR/stopofbiz.sh"
-        cd /home/$OFBIZUSER/$OFBIZDIR
+    if [ "$USER" = "$NOERPUSER" ]; then
+        echo "stopping standard /home/$NOERPUSER/$NOERPDIR/bin/stop"
+        cd /home/$NOERPUSER/$NOERPDIR
 	    MAXCOUNT=10
         COUNTER=0
         until [ $COUNTER -gt $MAXCOUNT ]; do
              COUNTER=$((COUNTER+1))
              echo "Attempt number: $COUNTER"
 
-            ./stopofbiz.sh
+            ./stopnoerp.sh
             if [ $? = 1 ]; then
                 echo "stop success" 
                 return 0
             fi
             sleep 3
         done
-        echo "stopping ofbiz from user: $OFBIZUSER failed after $MAXCOUNT attemps"
+        echo "stopping noerp from user: $NOERPUSER failed after $MAXCOUNT attemps"
         return 1
     fi
 }
 
-#check for user, if wrong try to change to 'OFBIZUSER' and re-execute.
+#check for user, if wrong try to change to 'NOERPUSER' and re-execute.
 checkUser() {
-    if [ "$USER" != "$OFBIZUSER" ]; then
+    if [ "$USER" != "$NOERPUSER" ]; then
         if [ "$USER" = "" ]; then
-            exec su - $OFBIZUSER -c "$0 $1 "
+            exec su - $NOERPUSER -c "$0 $1 "
 	    else
-	        exec sudo -u $OFBIZUSER $0 $1 
+	        exec sudo -u $NOERPUSER $0 $1 
 	    fi
         exit $?
     fi
 }
 
-# OFBiz processes running
+# NoERP processes running
 running() {
-    OFBIZ_PROCS=`/bin/ps h -o pid,args -C java -u $OFBIZUSER | /bin/grep -e "-jar ofbiz.jar" | /bin/egrep -o "^[[:space:]]*[[:digit:]]*"`
+    NOERP_PROCS=`/bin/ps h -o pid,args -C java -u $NOERPUSER | /bin/grep -e "-jar noerp.jar" | /bin/egrep -o "^[[:space:]]*[[:digit:]]*"`
 }
 
 #========= main program ===============
@@ -108,11 +108,11 @@ case "$1" in
     ;;
     "status")
         running
-        if [ "$OFBIZ_PROCS" = "" ]; then
-            echo "OFBiz for user: $OFBIZUSER in dir: $OFBIZDIR is stopped"
+        if [ "$NOERP_PROCS" = "" ]; then
+            echo "NoERP for user: $NOERPUSER in dir: $NOERPDIR is stopped"
             exit 1
         else
-            echo "OFBiz for user: $OFBIZUSER in dir: $OFBIZDIR is running"
+            echo "NoERP for user: $NOERPUSER in dir: $NOERPDIR is running"
             exit 0
         fi
     ;;

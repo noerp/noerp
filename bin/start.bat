@@ -1,62 +1,90 @@
-echo off
-rem #####################################################################
-rem Licensed to the Apache Software Foundation (ASF) under one
-rem or more contributor license agreements.  See the NOTICE file
-rem distributed with this work for additional information
-rem regarding copyright ownership.  The ASF licenses this file
-rem to you under the Apache License, Version 2.0 (the
-rem "License"); you may not use this file except in compliance
-rem with the License.  You may obtain a copy of the License at
-rem
-rem http://www.apache.org/licenses/LICENSE-2.0
-rem
-rem Unless required by applicable law or agreed to in writing,
-rem software distributed under the License is distributed on an
-rem "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-rem KIND, either express or implied.  See the License for the
-rem specific language governing permissions and limitations
-rem under the License.
-rem #####################################################################
+@if "%DEBUG%" == "" @echo off
+@rem ##########################################################################
+@rem
+@rem  gradleapp startup script for Windows
+@rem
+@rem ##########################################################################
 
-%~d0
-set OFBIZ_HOME=%~p0..\
+@rem Set local scope for the variables with windows NT shell
+if "%OS%"=="Windows_NT" setlocal
 
-rem ### Console log file
-rem set OFBIZ_LOG=runtime\logs\console.log
+@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLEAPP_OPTS to pass JVM options to this script.
+set DEFAULT_JVM_OPTS=
 
-rem ### Delete the last log
-rem del %OFBIZ_LOG%
+set DIRNAME=%~dp0
+if "%DIRNAME%" == "" set DIRNAME=.
+set APP_BASE_NAME=%~n0
+set NOERP_HOME=%DIRNAME%..
 
-rem ###VM args block ####################################################
-rem set MEMIF=-Xms128M -Xmx512M -XX:MaxPermSize=512m
-rem # RMI settings
-rem set DEBUG=-Dsun.rmi.server.exceptionTrace=true
-rem # Automatic IP address for Windows
-rem ipconfig | find "IP." | find /v "::" | find /v "0.0.0.0" > tmp.tmp
-rem for /f "tokens=2* delims=:" %%a in (tmp.tmp)  do for %%b IN (%%a) do set IPADDR=%%b
-rem del tmp.tmp
-rem set RMIIF=-Djava.rmi.server.hostname=%IPADDR%
-rem # Not needed anymore, for history
-rem set MISC=-Duser.language=en
-rem set VMARGS=%MEMIF% %MISC% %DEBUG% %RMIIF%
-rem ####################################################################
+@rem Find java.exe
+if defined JAVA_HOME goto findJavaFromJavaHome
 
-rem ### Worldpay Config
-rem set VMARGS=-Xbootclasspath/p:applications\accounting\lib\cryptix.jar %VMARGS%
+set JAVA_EXE=java.exe
+%JAVA_EXE% -version >NUL 2>&1
+if "%ERRORLEVEL%" == "0" goto init
 
+echo.
+echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+echo.
+echo Please set the JAVA_HOME variable in your environment to match the
+echo location of your Java installation.
 
-rem ### Different ways of launching OFBiz ##############################
-rem ### start ofbiz with previous set VMARGS
-rem "%JAVA_HOME%\bin\java" %VMARGS% -jar ofbiz.jar > %OFBIZ_LOG%
+goto fail
 
-rem ### This one is for more of a debugging mode
-rem "%JAVA_HOME%\bin\java" -Xms128M -Xmx512M -XX:MaxPermSize=512m -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -jar ofbiz.jar > runtime\logs\console.log
+:findJavaFromJavaHome
+set JAVA_HOME=%JAVA_HOME:"=%
+set JAVA_EXE=%JAVA_HOME%/bin/java.exe
 
-rem ### Simple easy to read line
-cd %OFBIZ_HOME%
-echo on
-"%JAVA_HOME%\bin\java" -Xms128M -Xmx512M -XX:MaxPermSize=512m -jar ofbiz.jar
-echo off
-rem ### If you would prefer the console output to be logged rather than displayed switch out the above line for this one
-rem "%JAVA_HOME%\bin\java" -Xms128M -Xmx512M -XX:MaxPermSize=512m -jar ofbiz.jar > runtime\logs\console.log
- 
+if exist "%JAVA_EXE%" goto init
+
+echo.
+echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
+echo.
+echo Please set the JAVA_HOME variable in your environment to match the
+echo location of your Java installation.
+
+goto fail
+
+:init
+@rem Get command-line arguments, handling Windows variants
+
+if not "%OS%" == "Windows_NT" goto win9xME_args
+if "%@eval[2+2]" == "4" goto 4NT_args
+
+:win9xME_args
+@rem Slurp the command line arguments.
+set CMD_LINE_ARGS=
+set _SKIP=2
+
+:win9xME_args_slurp
+if "x%~1" == "x" goto execute
+
+set CMD_LINE_ARGS=%*
+goto execute
+
+:4NT_args
+@rem Get arguments from the 4NT Shell from JP Software
+set CMD_LINE_ARGS=%$
+
+:execute
+@rem Setup the command line
+
+set CLASSPATH=%NOERP_HOME%\bin\noerp.jar
+
+@rem Execute gradleapp
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLEAPP_OPTS%  -classpath "%CLASSPATH%" org.noerp.base.start.Start %CMD_LINE_ARGS%
+
+:end
+@rem End local scope for the variables with windows NT shell
+if "%ERRORLEVEL%"=="0" goto mainEnd
+
+:fail
+rem Set variable GRADLEAPP_EXIT_CONSOLE if you need the _script_ return code instead of
+rem the _cmd.exe /c_ return code!
+if  not "" == "%GRADLEAPP_EXIT_CONSOLE%" exit 1
+exit /b 1
+
+:mainEnd
+if "%OS%"=="Windows_NT" endlocal
+
+:omega

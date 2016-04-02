@@ -18,103 +18,103 @@
 # under the License.
 #####################################################################
 #
-# ofbiz        This shell script takes care of starting and stopping
-#              the OFBiz subsystem. This version is for Debian systems
+# noerp        This shell script takes care of starting and stopping
+#              the NoERP subsystem. This version is for Debian systems
 #
 # chkconfig: - 80 10
-# description: OFBiz server
+# description: NoERP server
 ### BEGIN INIT INFO
-# Provides:          OFBiz ERP software
+# Provides:          NoERP ERP software
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Apache-OFBiz
-# Description:       OFBiz ERP Software
+# Short-Description: Apache-NoERP
+# Description:       NoERP ERP Software
 ### END INIT INFO
 
 # Paths - Edit for your locations
 JAVA_BINARY=/usr/java/j2sdk1.4.2/bin/java
-OFBIZ_HOME=/home/ofbiz/ofbiz
-OFBIZ_LOG=$OFBIZ_HOME/runtime/logs/console.log
+NOERP_HOME=/home/noerp/noerp
+NOERP_LOG=$NOERP_HOME/runtime/logs/console.log
 
 # VM Options
 JAVA_VMOPTIONS="-Xms128M -Xmx512M -XX:MaxPermSize=512m"
 
 # Java arguments
-JAVA_ARGS="-jar ofbiz.jar"
+JAVA_ARGS="-jar noerp.jar"
 
-# *nix user ofbiz should run as (you must create this user first)
-OFBIZ_USER=ofbiz
+# *nix user noerp should run as (you must create this user first)
+NOERP_USER=noerp
 
-# OFBiz processes running
-ofbizprocs() {
-    OFBIZ_PROCS=`/bin/ps h -o pid,args -C java | /bin/grep -e "$JAVA_ARGS" | /bin/egrep -o "^[[:space:]]*[[:digit:]]*"`
+# NoERP processes running
+noerpprocs() {
+    NOERP_PROCS=`/bin/ps h -o pid,args -C java | /bin/grep -e "$JAVA_ARGS" | /bin/egrep -o "^[[:space:]]*[[:digit:]]*"`
 }
 
 # Checking user...
 checkuser() {
-    if [ "$USER" != "$OFBIZ_USER" ]; then
+    if [ "$USER" != "$NOERP_USER" ]; then
         echo failure
         echo
-        echo "Only users root or $OFBIZ_USER should start/stop the application"
+        echo "Only users root or $NOERP_USER should start/stop the application"
         exit 1
     fi
 }
 
-# Start OFBiz
+# Start NoERP
 start() {
-    echo -n "Starting OFBiz: "
+    echo -n "Starting NoERP: "
     checkuser
-    ofbizprocs
-    if [ "$OFBIZ_PROCS" != "" ]; then
+    noerpprocs
+    if [ "$NOERP_PROCS" != "" ]; then
         echo failure
         echo
-        echo "OFBiz is already running..."
+        echo "NoERP is already running..."
         return 1
     fi
 
     # All clear
-    cd $OFBIZ_HOME
+    cd $NOERP_HOME
     umask 007
-    /bin/rm -f $OFBIZ_LOG
-    $JAVA_BINARY $JAVA_VMOPTIONS $JAVA_ARGS >>$OFBIZ_LOG 2>>$OFBIZ_LOG&
+    /bin/rm -f $NOERP_LOG
+    $JAVA_BINARY $JAVA_VMOPTIONS $JAVA_ARGS >>$NOERP_LOG 2>>$NOERP_LOG&
     echo success
     return 0
 }
 
-# Stop OFBiz
+# Stop NoERP
 stop() {
-    echo -n "Stopping OFBiz: "
+    echo -n "Stopping NoERP: "
     checkuser
-    ofbizprocs
-    if [ "$OFBIZ_PROCS" == "" ]; then
+    noerpprocs
+    if [ "$NOERP_PROCS" == "" ]; then
         echo failure
         echo
-        echo "OFBiz is not running..."
+        echo "NoERP is not running..."
         return 1
     fi
 
     # All clear
-    cd $OFBIZ_HOME
+    cd $NOERP_HOME
     umask 007
-    $JAVA_BINARY $JAVA_VMOPTIONS $JAVA_ARGS -shutdown >>$OFBIZ_LOG
-    ofbizprocs
-    if [ "$OFBIZ_PROCS" != "" ]; then
+    $JAVA_BINARY $JAVA_VMOPTIONS $JAVA_ARGS -shutdown >>$NOERP_LOG
+    noerpprocs
+    if [ "$NOERP_PROCS" != "" ]; then
         # Let's try to -TERM
-        /bin/kill -TERM $OFBIZ_PROCS
+        /bin/kill -TERM $NOERP_PROCS
     fi
-    ofbizprocs
-    if [ "$OFBIZ_PROCS" != "" ]; then
+    noerpprocs
+    if [ "$NOERP_PROCS" != "" ]; then
         # Let's try it the hard way!
-        /bin/kill -9 $OFBIZ_PROCS
+        /bin/kill -9 $NOERP_PROCS
     fi
-    ofbizprocs
-    if [ "$OFBIZ_PROCS" != "" ]; then
+    noerpprocs
+    if [ "$NOERP_PROCS" != "" ]; then
         echo failure
         echo
         echo "Some processes could not be stopped:"
-        echo $OFBIZ_PROCS
+        echo $NOERP_PROCS
         echo "A possible solution is to try this command once more!"
         return 1
     else
@@ -123,9 +123,9 @@ stop() {
     fi
 }
 
-# If root is running this script, su to $OFBIZ_USER first
+# If root is running this script, su to $NOERP_USER first
 if [ "$USER" = "root" ]; then
-    exec su - $OFBIZ_USER -c "$0 $1"
+    exec su - $NOERP_USER -c "$0 $1"
 fi
 
 case "$1" in
@@ -140,12 +140,12 @@ case "$1" in
         start
     ;;
     'status')
-        ofbizprocs
-        if [ "$OFBIZ_PROCS" == "" ]; then
-            echo "OFBiz is stopped"
+        noerpprocs
+        if [ "$NOERP_PROCS" == "" ]; then
+            echo "NoERP is stopped"
             exit 1
         else
-            echo "OFBiz is running"
+            echo "NoERP is running"
             exit 0
         fi
     ;;

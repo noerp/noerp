@@ -1,6 +1,6 @@
 *.class
 buildSrc/build
-appss/*/build
+local/*/build
 vendor/*/*/build
 
 # Mobile Tools for Java (J2ME)
@@ -14,7 +14,7 @@ vendor/*/*/build
 hs_err_pid*
 
 .*
-# /vendor/
+/vendor/
 /runtime/
 /bin/noerp.jar
 

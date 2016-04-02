@@ -2,10 +2,8 @@
  * NoERP project settings file
  */
 
-rootProject.name = 'noerp'
-
 def vendorDir = "vendor";
-def appsDir = "apps";
+def localDir = "local";
 
 File[] fileList(String dir){
 	file(dir).listFiles({file -> file.isDirectory()} as FileFilter).sort()
@@ -29,10 +27,10 @@ void includeProjects(File vendor){
 // Vendor directory
 File[] componentDirs = fileList(vendorDir)
 
-// Add apps if exists
-File apps = new File(appsDir)
-if(apps.exists()){
-	componentDirs += [apps]
+// Add local if exists
+File local = new File(localDir)
+if(local.exists()){
+	componentDirs += [local]
 }
 
 // Include sub projects

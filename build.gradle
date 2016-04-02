@@ -1,1 +1,29 @@
+// Subproject config
+subprojects {
+	
+	// In this section you declare where to find the dependencies of your project
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+	
+	// Apply the java plugin to add support for Java
+	apply plugin: 'java'
+	
+	// Apply the groovy plugin to add support for Groovy
+	apply plugin: 'groovy'
+}
+
+// Apply the eclipse plugin to add ide support， must be applied before the noerp plugin
+apply plugin: 'eclipse'
+
+// Apply the noerp plugin to add tools for building noerp application
 apply plugin: 'org.noerp.gradle'
+
+// Config gradle wrapper
+wrapper {
+	gradleVersion = "2.11"
+}
+
+// Default tasks to execute
+defaultTasks 'build'
