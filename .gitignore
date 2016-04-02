@@ -14,9 +14,13 @@ vendor/*/*/build
 hs_err_pid*
 
 .*
-/vendor/
-/runtime/
-/bin/noerp.jar
+
+vendor/*
+runtime/*
+
+!.gitkeep
+
+bin/noerp.jar
 
 # IDE config fiels
 *.iml
